@@ -2,9 +2,7 @@ const Navbar = ({ scrollToHome, scrollToAbout, scrollToProject, scrollToContact 
   return (
     <navbar className="navbar">
       <div className="navbar-logo">
-        <a href="#" onClick={scrollToHome}>
-          Logo
-        </a>
+        <a onClick={scrollToHome}>Logo</a>
       </div>
       <div className="navbar-links">
         <a onClick={scrollToAbout}>About</a>
