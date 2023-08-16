@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "./App.css";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Home from "./components/Home";
 
 function App() {
+  const [language, setLanguage] = useState("en");
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
@@ -24,11 +25,13 @@ function App() {
         scrollToAbout={scrollToAbout}
         scrollToProject={scrollToProject}
         scrollToContact={scrollToContact}
+        language={language}
+        setLanguage={setLanguage}
       />
-      <Home refProp={homeRef} />
-      <About refProp={aboutRef} />
-      <Projects refProp={projectRef} />
-      <Contact refProp={contactRef} />
+      <Home refProp={homeRef} language={language} />
+      <About refProp={aboutRef} language={language} />
+      <Projects refProp={projectRef} language={language} />
+      <Contact refProp={contactRef} language={language} />
     </>
   );
 }

@@ -7,34 +7,62 @@ import mongo from "../assets/images/database.png";
 import git from "../assets/images/git.png";
 import gitHub from "../assets/images/github.png";
 
-const About = ({ refProp }) => {
-  return (
-    <div ref={refProp} className="about-container">
-      <div className="my-info">
-        <h2 className="my-info-header">About Me</h2>
-        <p className="my-info-about">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia deleniti ratione esse
-          possimus! Nobis dolorem quis ipsum molestiae inventore doloribus cum maxime impedit
-          dolorum ipsa, aliquid corporis necessitatibus obcaecati velit! Dignissimos, reprehenderit
-          quo vitae facere nisi porro, rerum illum ipsum sit culpa delectus veniam! Animi explicabo,
-          libero accusamus fugit, sed, sunt debitis assumenda veritatis optio est ad tenetur dolor
-          blanditiis. Obcaecati ipsam dicta at modi quasi unde! Dolorem at quam aliquam. Culpa
-          eligendi reiciendis deserunt, quod harum at officia, labore dolore libero molestias,
-          doloribus a est hic nesciunt voluptatum nam!
-        </p>
+const About = ({ refProp, language }) => {
+  if (language === "en") {
+    return (
+      <div ref={refProp} className="about-container">
+        <div className="my-info">
+          <h2 className="my-info-header">About Me</h2>
+          <p className="my-info-about">
+            I'm a passionate and detail-oriented Full Stack developer that favours a clean code and
+            minimalist design. I believe in the power of collaboration and continuous learning.
+            Whether it's diving into the world of APIs, crafting responsive designs, or optimizing
+            database performance, I'm always eager to expand my skill set and contribute to
+            innovative projects. Outside of coding, you'll find me exploring the latest tech trends,
+            playing sports and reading a good book.
+          </p>
+        </div>
+        <div className="technologies-container">
+          <img src={html} alt="html picture" className="technologies-logo" />
+          <img src={css} alt="html picture" className="technologies-logo" />
+          <img src={javascript} alt="html picture" className="technologies-logo" />
+          <img src={reactPic} alt="html picture" className="technologies-logo" />
+          <img src={nodeJs} alt="html picture" className="technologies-logo" />
+          <img src={mongo} alt="html picture" className="technologies-logo" />
+          <img src={git} alt="html picture" className="technologies-logo" />
+          <img src={gitHub} alt="html picture" className="technologies-logo" />
+        </div>
       </div>
-      <div className="technologies-container">
-        <img src={html} alt="html picture" className="technologies-logo" />
-        <img src={css} alt="html picture" className="technologies-logo" />
-        <img src={javascript} alt="html picture" className="technologies-logo" />
-        <img src={reactPic} alt="html picture" className="technologies-logo" />
-        <img src={nodeJs} alt="html picture" className="technologies-logo" />
-        <img src={mongo} alt="html picture" className="technologies-logo" />
-        <img src={git} alt="html picture" className="technologies-logo" />
-        <img src={gitHub} alt="html picture" className="technologies-logo" />
+    );
+  }
+  if (language === "de") {
+    return (
+      <div ref={refProp} className="about-container">
+        <div className="my-info">
+          <h2 className="my-info-header">Über mich</h2>
+          <p className="my-info-about">
+            Ich bin ein leidenschaftlicher und detailorientierter Full Stack Entwickler, der
+            sauberen Code und minimalistisches Design bevorzugt. Ich glaube an die Kraft der
+            Zusammenarbeit und kontinuierlichen Weiterbildung. Ob es darum geht, in die Welt der
+            APIs einzutauchen, responsive Designs zu erstellen oder die Leistung von Datenbanken zu
+            optimieren, ich bin stets daran interessiert, meine Fähigkeiten zu erweitern und zu
+            innovativen Projekten beizutragen. Abseits vom Codieren findet man mich dabei, die
+            neuesten technischen Trends zu erkunden, Sport zu treiben und ein gutes Buch zu lesen.
+          </p>
+        </div>
+        <div className="technologies-container">
+          <img src={html} alt="html picture" className="technologies-logo" />
+          <img src={css} alt="html picture" className="technologies-logo" />
+          <img src={javascript} alt="html picture" className="technologies-logo" />
+          <img src={reactPic} alt="html picture" className="technologies-logo" />
+          <img src={nodeJs} alt="html picture" className="technologies-logo" />
+          <img src={mongo} alt="html picture" className="technologies-logo" />
+          <img src={git} alt="html picture" className="technologies-logo" />
+          <img src={gitHub} alt="html picture" className="technologies-logo" />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default About;
