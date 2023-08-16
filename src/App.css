@@ -6,7 +6,7 @@
   font-family: 'Josefin Sans', sans-serif; 
   height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
 }
 
 .logo {
@@ -91,7 +91,7 @@
   padding: 0 20px; 
   color: #333; 
   margin: 0 6rem 0 6rem;
-  /* scroll-snap-align: start; */
+  scroll-snap-align: start;
 }
 
 .heading-container {
@@ -139,7 +139,7 @@
   width: 100%;
   background-color: #f9f9f9; 
   color: #333; 
-  /* scroll-snap-align: start; */
+  scroll-snap-align: start;
 }
 
 .my-info {
@@ -182,8 +182,9 @@
   align-items: center;
   height: 100vh;
   padding: 100px 20px;
-  background-color: #f9f9f9; /* Light gray */
-  color: #333; /* Dark text color */
+  background-color: #f9f9f9;
+  color: #333; 
+  scroll-snap-align: start;
 }
 
 .project-header {
@@ -252,6 +253,54 @@
 }
 
 .project-name:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+.contact-container {
+  text-align: center;
+  padding: 100px 0;
+  background-color: #f9f9f9;
+  color: #333;
+  scroll-snap-align: start;
+}
+
+.contact-header {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.email,
+.github,
+.linkedin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.link {
+  font-size: 1.2rem;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #0056b3;
+}
+
+.contact-link {
+  color: #333;
+}
+
+.contact-link:hover {
   text-decoration: underline;
   color: #333;
 }
