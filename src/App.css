@@ -1,3 +1,7 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
 #root {
   /* max-width: 1280px;
   margin: 0 auto;
@@ -5,8 +9,7 @@
   text-align: center; */
   font-family: 'Josefin Sans', sans-serif; 
   height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  
 }
 
 .logo {
@@ -342,7 +345,7 @@
 
 
 @media (max-width: 420px) {
-  #root {
+  html {
     scroll-snap-type:none;
   }
 
@@ -428,7 +431,7 @@
   }
 
   .project-header {
-    margin-top: 6rem;
+    margin-top: 9rem;
   }
 
   .project-card img {
@@ -472,6 +475,10 @@
 }
 
 @media (min-width: 421px) and (max-width: 767px) {
+  html {
+    scroll-snap-type:none;
+  }
+
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -552,7 +559,7 @@
   }
 
   .project-header {
-    margin-top: 5rem;
+    margin-top: 8rem;
   }
 
   .project-card img {
