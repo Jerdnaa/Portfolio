@@ -1,6 +1,7 @@
 import coding from "../assets/images/coding.png";
 import resume from "../assets/cv/resume.pdf";
 import lebenslauf from "../assets/cv/Lebenslauf.pdf";
+import { Link } from "react-router-dom";
 
 const Home = ({ refProp, language }) => {
   if (language === "en") {
@@ -23,15 +24,9 @@ const Home = ({ refProp, language }) => {
         <div className="heading-container">
           <h1 className="home-name">Andrej Delinac</h1>
           <h3 className="home-job">Full Stack Entwickler</h3>
-          <a
-            className="resume-dl"
-            href={lebenslauf}
-            without
-            rel="noopener noreferrer"
-            target="_blank"
-          >
+          <Link className="resume-dl" to={lebenslauf} target="_blank">
             Lebenslauf
-          </a>
+          </Link>
         </div>
         <img src={coding} alt="coding picture" className="coding-img" />
       </div>
